@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vocabulary - easy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <link href="css/fontello.css" rel="stylesheet" type="text/css" />
+        <script src="functions.js"></script>
+    </head>
+    <body onload="randomWordEnglishEasy()">
+        <a href="index.html"><header>Przetłumacz</header></a>
+        <section>
+            <div class="translation">
+                <div id="language">     
+                    <table>
+                        <tr>
+                            <td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td>
+                            <td><button type="button" class="changeLanguage" onclick="changeLanguageEasy()"><i class="icon-exchange"></i></button></td>
+                            <td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td>
+                        </tr>
+                    </table> 
+                </div>
+                
+                <div id="animal"></div>
+                <input type="text" name="word" id="word" placeholder="Przetłumacz słówko">
+                <div id="randomWord"><button type="button" onclick="check()" class="check">Sprawdź</button><button type="button" onclick="randomWordEnglishEasy()">Dalej</button><br></div>
+                <button type="button" onclick="show()">Pokaż</button><button type="button" onclick="showOne()">Pokaż 1</button>
+                <div id="result"></div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; Train your english</p>
+        </footer>
+    </body>
+</html>
