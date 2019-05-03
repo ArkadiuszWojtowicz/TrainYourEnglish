@@ -1,44 +1,48 @@
-var wordsEasy = ["window", "sun", "wardrobe", "flower"];
-var translationsEasy = ["okno", "słońce", "szafa", "kwiatek"];
-var wordsMedium = ["careful", "demand", "shape", "blood"];
-var translationsMedium = ["ostrożny", "żądać", "kształt", "krew"];
-var wordsHard = ["secluded", "idle", "hideous", "swamped"];
-var translationsHard = ["odosobniony", "bezczynny", "ohydny", "zalany"];
+var wordsEasy = ["database", "data", "mouse", "printer", "variable", "software", "customize", "enterprise", "socket", "design", "user", "cloud", "core", "interface", "cable", "attachment", "memory", "keyboard", "compiler", "licence", "multiple", "button", "content", "form", "default", "value", "hidden", "focus", "website", "shadow", "tutorial", "random", "underlined", "portable", "pattern", "row", "tool", "upgrade"];//easy
+var translationsEasy = ["baza danych", "dane", "mysz", "drukarka", "zmienna", "oprogramowanie", "dostosować", "przedsiębiorstwo", "gniazdo", "projekt", "użytkownik", "chmura", "główny", "interfejs", "kabel", "załącznik", "pamięć", "klawiatura", "compilator", "licencja", "wielokrotny", "przycisk", "zawartość", "formularz", "domyślny", "wartość", "ukryty", "skupiać", "strona internetowa", "cień", "poradnik", "losowy", "podkreślony", "przenośny", "wzorzec", "wiersz", "narzędzie", "aktualizacja"];
+var wordsEasyLength = wordsEasy.length-1;
+var wordsMedium = ["device", "flexibility", "factor", "decrypt", "accurate", "domain", "collaboration", "accomplish", "regardless", "accessible", "branch", "warehouse", "border", "margin", "font", "layout", "inline", "divide", "override", "property", "opacity", "transparent", "query", "container", "header", "remote", "validate", "portable", "restore", "extension", "invalid", "join", "maintenance", "pending", "queue", "scope", "syntax", "vendor"];//medium
+var translationsMedium = ["urządzenie", "elastyczność", "czynnik", "deszyfrować", "dokładny", "domena", "współpraca", "ukończyć", "bez względu", "dostępny", "użytkownik", "hurtownia", "granica", "margines", "czcionka", "układ", "w linii", "dzielić", "nadpisać", "właściwość", "nieprzezroczystość", "przezroczysty", "pytanie", "pojemnik", "nagłówek", "zdalny", "potwierdzać", "przenośny", "przywracać", "rozszerzenie", "nieprawidłowy", "złączenie", "utrzymanie", "w toku", "kolejka", "zasięg", "składnia", "dostwca"];
+var wordsMediumLength = wordsMedium.length-1;
+var wordsHard = ["time-consuming", "prompts", "integrity", "anchor", "fixed", "pointer", "copper", "inconsistent", "accuracy", "forecasting", "switch", "obstacle", "revenue", "guideline", "inherent", "parallel", "uniqueness", "interrelated", "inventive", "spoofing", "latency", "meaningful", "predictive", "redundancy", "refinement", "route", "stack", "subset", "transition", "trunk", "warranty", "widespread", "sender", "ROM chip"];//hard
+var translationsHard = ["czasochłonny", "podpowiedzi", "integralność", "kotwica", "niezmienny", "wskaźnik", "miedź", "niespójny", "precyzja", "prognozowanie", "przełącznik", "przeszkoda", "przychód", "wytyczna", "nieodłączny", "równolegle", "unikalność", "wzajemnie powiązany", "pomysłowy", "fałszowanie", "czas oczekiwania", "znaczący", "prognostyczny", "nadmiarowość", "udoskonalenie", "trasa", "stos", "podzbiór", "przemiana", "magistrala", "gwarancja", "rozpowszechniony", "nadawca", "kość pamięci ROM"];
+var wordsHardLength = wordsHard.length-1;
 
 function randomWordEnglishEasy() { // this function draws one word for easy level (eng -> pol)
-    randomWord(wordsEasy, translationsEasy);
+    randomWord(wordsEasy, translationsEasy, wordsEasyLength);
 }
 function randomWordEnglishMedium() {
-    randomWord(wordsMedium, translationsMedium);
+    randomWord(wordsMedium, translationsMedium, wordsMediumLength);
 }
 function randomWordEnglishHard() {
-    randomWord(wordsHard, translationsHard);
+    randomWord(wordsHard, translationsHard, wordsHardLength);
 }
 
 function randomWordPolishEasy() { // this function draws one word for easy level (pol -> eng)
-    randomWord(translationsEasy, wordsEasy);
+    randomWord(translationsEasy, wordsEasy, wordsEasyLength);
 }
 function randomWordPolishMedium() {
-    randomWord(translationsMedium, wordsMedium);
+    randomWord(translationsMedium, wordsMedium, wordsMediumLength);
 }
 function randomWordPolishHard() {
-    randomWord(translationsHard, wordsHard);
+    randomWord(translationsHard, wordsHard, wordsHardLength);
 }
 
-var randomFirst = randomSecond = Math.floor(Math.random() * 4);
-function randomWord(words, translations) { // this function draws one word
+
+function randomWord(words, translations, length) { // this function draws one word
+    var randomFirst = randomSecond = Math.floor(Math.random() * length); // variable length is table length
     document.getElementById("result").innerHTML = "";
     document.getElementById("word").value = "";
 
     while (randomFirst === randomSecond) {
-        randomSecond = Math.floor(Math.random() * 4);
+        randomSecond = Math.floor(Math.random() * length);
     }
     randomFirst = randomSecond;
 
     randomWordTranslation = '';
-    for (k = 0; k <= 3; k++) {
+    for (k = 0; k <= length; k++) {
         if (randomSecond === k) {
-            document.getElementById('animal').innerHTML = words[k];
+            document.getElementById('wordDisplay').innerHTML = words[k];
             randomWordTranslation = translations[k];
         }
     }
@@ -57,6 +61,7 @@ function check() { // this function checks answer given
         document.getElementById("result").innerHTML = "Dobrze!";
         i = randomWordTranslation.length; // useful for showOne() function
     }
+    
 
 }
 var language = 'english';

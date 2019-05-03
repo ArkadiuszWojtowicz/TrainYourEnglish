@@ -78,8 +78,10 @@ a:active {
 }
 
 section .translation{
-    width: 310px;
-    height: 450px;
+    width: auto;
+    min-width: 318px;
+    height: auto;
+    min-height: 450px;
     background: linear-gradient(red, yellow);
     display: inline-block;
     margin: 25px 0;
@@ -137,14 +139,16 @@ table{
     /*background: green;*/
     background: linear-gradient(lightgreen, green);
 }
-#animal{
+#wordDisplay{
     margin-top: 10px;
+    padding: 0 10px;
 }
 #result{
     margin-top: 10px;
+    padding: 10px 10px;
 }
 table{
-    margin: 20px 20px;
+    margin: 20px auto;
 }
 .grammar{
     width: 50%;
@@ -158,6 +162,9 @@ table{
 }
 .container{
     padding: 40px 0;
+}
+#language{
+    text-align: center;
 }
 @media only screen and (max-width: 1020px){
     container{
