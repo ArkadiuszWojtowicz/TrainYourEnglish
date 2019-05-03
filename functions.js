@@ -30,7 +30,7 @@ function randomWordPolishHard() {
 
 
 function randomWord(words, translations, length) { // this function draws one word
-    var randomFirst = randomSecond = Math.floor(Math.random() * length); // variable length is table length
+    var randomFirst = randomSecond = Math.floor(Math.random() * length); // variable length is array length
     document.getElementById("result").innerHTML = "";
     document.getElementById("word").value = "";
 
