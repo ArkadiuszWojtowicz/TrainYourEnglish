@@ -23,7 +23,7 @@
                 </div>
                 
                 <div id="wordDisplay"></div>
-                <input type="text" name="word" id="word" placeholder="Przetłumacz słówko">
+                <input type="text" name="word" id="word" placeholder="Przetłumacz słówko" onfocus="this.placeholder=''" onblur="this.placeholder='Przetłumacz słówko'">
                 <div id="randomWord"><button type="button" onclick="check()" class="check">Sprawdź</button><button type="button" onclick="randomWordEnglishMedium()">Dalej</button><br></div>
                 <button type="button" onclick="show()">Pokaż</button><button type="button" onclick="showOne()">Pokaż 1</button>
                 <div id="result"></div>
