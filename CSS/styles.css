@@ -10,10 +10,16 @@ header{
     text-align: center;
     font-size: 30px;
     letter-spacing: 2px;
-
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
 }
+/*.fullScreen{
+    min-height: 100vh;
+}*/
 body{
-    background: #000;
+    /*background: #000;*/
 }
 section{
 
@@ -22,6 +28,7 @@ section{
     text-align: center;
     margin: 0;
     /*padding: 70px 0;*/
+    min-height: 100vh;
 
 }
 .table {
@@ -29,10 +36,15 @@ section{
     border-collapse: separate;
     border-spacing: 30px;
     margin: 0 auto;
+    
 }
 
 .row { 
-    display:table-row;  
+    width: auto;
+    height: auto;
+    margin: 175px 0;
+    padding: 10px;
+    position: relative;
 }
 section .firstChoice{
     width: 300px;
@@ -56,6 +68,10 @@ footer{
     font-size: 20px;
     text-align: center;
     padding: 14px 0 14px 0;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
 }
 a:link {
     color: #000;  
@@ -84,7 +100,7 @@ section .translation{
     min-height: 450px;
     background: linear-gradient(red, yellow);
     display: inline-block;
-    margin: 25px 0;
+    margin: 175px 0;
     font-size: 50px;
 
 }
@@ -162,6 +178,8 @@ table{
 }
 .container{
     padding: 40px 0;
+    /*width: 50%;*/
+    height: 100%;
 }
 #language{
     text-align: center;
@@ -176,4 +194,7 @@ table{
     .table {
         border-spacing: 15px;
     }
+}
+.starsReview{
+    background: yellow;
 }
