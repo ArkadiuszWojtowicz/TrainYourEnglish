@@ -67,12 +67,12 @@ function check() { // this function checks answer given
 var language = 'english';
 function changeLanguageEasy() { // this function changes language
     if (language === 'english') {
-        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageEasy()"><i class="icon-exchange"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td></tr></table>';
+        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageEasy()"><i class="fas fa-exchange-alt"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td></tr></table>';
         randomWordPolishEasy();
         document.getElementById('randomWord').innerHTML = '<button type="button" onclick="check()" class="check">Sprawdź</button><button type="button" onclick="randomWordPolishEasy()">Dalej</button><br>';
         language = 'polish';
     } else {
-        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageEasy()"><i class="icon-exchange"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td></tr></table>';
+        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageEasy()"><i class="fas fa-exchange-alt"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td></tr></table>';
         randomWordEnglishEasy();
         document.getElementById('randomWord').innerHTML = '<button type="button" onclick="check()" class="check">Sprawdź</button><button type="button" onclick="randomWordEnglishEasy()">Dalej</button><br>';
         language = 'english';
@@ -80,12 +80,12 @@ function changeLanguageEasy() { // this function changes language
 }
 function changeLanguageMedium() {
     if (language === 'english') {
-        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageMedium()"><i class="icon-exchange"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td></tr></table>';
+        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageMedium()"><i class="fas fa-exchange-alt"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td></tr></table>';
         randomWordPolishMedium();
         document.getElementById('randomWord').innerHTML = '<button type="button" onclick="check()" class="check">Sprawdź</button><button type="button" onclick="randomWordPolishMedium()">Dalej</button><br>';
         language = 'polish';
     } else {
-        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageMedium()"><i class="icon-exchange"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td></tr></table>';
+        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageMedium()"><i class="fas fa-exchange-alt"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td></tr></table>';
         randomWordEnglishMedium();
         document.getElementById('randomWord').innerHTML = '<button type="button" onclick="check()" class="check">Sprawdź</button><button type="button" onclick="randomWordEnglishMedium()">Dalej</button><br>';
         language = 'english';
@@ -93,12 +93,12 @@ function changeLanguageMedium() {
 }
 function changeLanguageHard() { 
     if (language === 'english') {
-        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageHard()"><i class="icon-exchange"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td></tr></table>';
+        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageHard()"><i class="fas fa-exchange-alt"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td></tr></table>';
         randomWordPolishHard();
         document.getElementById('randomWord').innerHTML = '<button type="button" onclick="check()" class="check">Sprawdź</button><button type="button" onclick="randomWordPolishHard()">Dalej</button><br>';
         language = 'polish';
     } else {
-        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageHard()"><i class="icon-exchange"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td></tr></table>';
+        document.getElementById('language').innerHTML = '<table><tr><td style="width: 90px; text-align: center;"><span style="font-size:20px;">angielski</span></td><td width="90"><button type="button" class="changeLanguage" onclick="changeLanguageHard()"><i class="fas fa-exchange-alt"></i></button></td><td style="width: 90px; text-align: center;"><span style="font-size:20px;">polski</span></td></tr></table>';
         randomWordEnglishHard();
         document.getElementById('randomWord').innerHTML = '<button type="button" onclick="check()" class="check">Sprawdź</button><button type="button" onclick="randomWordEnglishHard()">Dalej</button><br>';
         language = 'english';
